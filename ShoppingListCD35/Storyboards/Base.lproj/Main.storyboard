@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asd-gj-cfG">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping List-->
+        <scene sceneID="K3t-WA-88J">
+            <objects>
+                <tableViewController id="6iK-Lx-KsR" customClass="ShoppingListTableViewController" customModule="ShoppingList_CD_35" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tDk-jD-Ahw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="xBackGround"/>
+                        <color key="separatorColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" name="xBackGround"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="listCell" id="65R-LG-zW1" customClass="ShoppingListTableViewCell" customModule="ShoppingList_CD_35" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="52.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="65R-LG-zW1" id="Kwp-cj-muN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-D4-ohf">
+                                            <rect key="frame" x="10.333333333333343" y="6" width="393.33333333333326" height="40.333333333333336"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.full" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xpf-IZ-PMN">
+                                                    <rect key="frame" x="0.0" y="2" width="40.333333333333336" height="36.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xpf-IZ-PMN" secondAttribute="height" multiplier="1:1" id="Op9-3a-GyD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-Hn-pFt">
+                                                    <rect key="frame" x="48.333333333333314" y="0.0" width="297" height="40.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbp-qx-7mv">
+                                                    <rect key="frame" x="353.33333333333337" y="0.0" width="40" height="40.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="4ww-01-HXz"/>
+                                                        <constraint firstAttribute="width" secondItem="Hbp-qx-7mv" secondAttribute="height" multiplier="1:1" id="y5x-3U-Ofh"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="isCompleteButtonTapped:" destination="65R-LG-zW1" eventType="touchUpInside" id="oj9-S3-zbR"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xpf-IZ-PMN" firstAttribute="centerY" secondItem="FZV-D4-ohf" secondAttribute="centerY" id="vyC-P9-m9E"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FZV-D4-ohf" firstAttribute="width" secondItem="Kwp-cj-muN" secondAttribute="width" multiplier="0.95" id="LLj-w2-Qdv"/>
+                                        <constraint firstItem="FZV-D4-ohf" firstAttribute="top" secondItem="Kwp-cj-muN" secondAttribute="top" constant="6" id="bqN-64-uv8"/>
+                                        <constraint firstAttribute="bottom" secondItem="FZV-D4-ohf" secondAttribute="bottom" constant="6" id="l8J-bV-2lI"/>
+                                        <constraint firstItem="FZV-D4-ohf" firstAttribute="centerX" secondItem="Kwp-cj-muN" secondAttribute="centerX" id="lhX-ug-luh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="xBackGround"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="isCompleteButton" destination="Hbp-qx-7mv" id="tOa-fV-3D5"/>
+                                    <outlet property="itemLabel" destination="NkP-Hn-pFt" id="V9O-lw-J4Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6iK-Lx-KsR" id="qe3-2G-uye"/>
+                            <outlet property="delegate" destination="6iK-Lx-KsR" id="bJV-pt-3dL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Shopping List" id="ilN-z5-WSM">
+                        <barButtonItem key="rightBarButtonItem" image="plus.square.fill.on.square.fill" catalog="system" id="YQp-3k-RCu">
+                            <connections>
+                                <action selector="addItemButtonTapped:" destination="6iK-Lx-KsR" id="L9A-fk-UQe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80P-Tk-gaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428.98550724637687" y="146.73913043478262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K21-6z-xW9">
+            <objects>
+                <navigationController id="asd-gj-cfG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hyd-Kd-xjE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="xBackGround"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="xBackGround"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6iK-Lx-KsR" kind="relationship" relationship="rootViewController" id="CoJ-1Z-Beq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooq-AQ-4jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.square.fill.on.square.fill" catalog="system" width="128" height="113"/>
+        <image name="tray.full" catalog="system" width="128" height="88"/>
+        <namedColor name="xBackGround">
+            <color red="0.0018097660575384469" green="0.22956901752727679" blue="0.37832013727945579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
